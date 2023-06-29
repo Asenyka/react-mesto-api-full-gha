@@ -1,0 +1,7 @@
+.places__title-heart {
+  padding: 22.5px 20px 27.5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}

@@ -1,0 +1,10 @@
+.identification__form-caption{
+    font-size: 14px;
+    line-height: 16.94px;
+    margin: 20px auto 0;
+}
+
+@media screen and (min-width: 1024px) {
+    .identification__form-caption{
+        margin-top: 15px;
+    }}

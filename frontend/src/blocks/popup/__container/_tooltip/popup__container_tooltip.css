@@ -1,0 +1,14 @@
+.popup__container_tooltip {
+  min-height: 208px;
+  min-width: 280px;
+  max-width: 430px;
+  align-items: center;
+  padding: 50px 18px;
+}
+
+@media screen and (min-width: 1024px) {
+  .popup__container_tooltip {
+    min-height: 210px;
+    padding: 60px 36px;
+  }
+}

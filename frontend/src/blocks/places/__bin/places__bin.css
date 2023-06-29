@@ -1,0 +1,10 @@
+.places__bin {
+  display: block;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.places__bin:hover {
+  opacity: 0.6;
+}

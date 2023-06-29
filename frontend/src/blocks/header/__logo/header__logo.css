@@ -1,0 +1,7 @@
+.header__logo {
+  width: calc(10374vw / 320);
+  max-width: 142px;
+  height: calc(2440vw / 320);
+  max-height: 33px;
+  object-fit: contain;
+}

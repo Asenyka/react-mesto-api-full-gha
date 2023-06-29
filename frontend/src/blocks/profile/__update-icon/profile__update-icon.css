@@ -1,0 +1,9 @@
+.profile__update-icon {
+  object-fit: contain;
+  width: 26px;
+  height: 26px;
+  display: block;
+  cursor: pointer;
+  transition: 0.2s;
+  position: relative;
+}

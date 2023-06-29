@@ -1,0 +1,10 @@
+.profile__pic {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  justify-self: center;
+  display: block;
+  cursor: pointer;
+  transition: 0.2s;
+  position: relative;
+}
