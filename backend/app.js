@@ -1,12 +1,14 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const { errors } = require('celebrate');
+const cors = require('cors');
 const router = require('./routes');
 const NotFoundError = require('./errors/not-found-error');
 
 mongoose.connect('mongodb://127.0.0.1/mestodb');
 
 const app = express();
+app.use(cors());
 app.use(express.json());
 app.use('/', router);
 app.use((req, res, next) => { next(new NotFoundError('Запрашиваемая страница не найдена')); });
