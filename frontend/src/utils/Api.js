@@ -1,13 +1,13 @@
 class Api {
-  constructor({ token, basePath }) {
-    this._token = token;
+  constructor({basePath }) {
     this._basePath = basePath;
   }
 
   _getHeaders() {
+    const token=localStorage.getItem("jwt");
     return {
       "Content-Type": "application/json",
-      authorization: this._token,
+      authorization: `Bearer ${token}`,
     };
   }
   _getJson(res) {
@@ -83,8 +83,7 @@ class Api {
 }
 
 const api = new Api({
-  token: "932dd1d7-dbf3-4149-befd-e973c13cb750",
-  basePath: "https://mesto.nomoreparties.co/v1/cohort-61",
+  basePath: "http://localhost:3000",
 });
 
 export default api;

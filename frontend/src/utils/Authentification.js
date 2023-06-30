@@ -1,5 +1,5 @@
 
-    const basePath="https://auth.nomoreparties.co"
+    const basePath="http://localhost:3000"
     function getHeaders() {
         return {
           "Content-Type": "application/json",
@@ -28,7 +28,9 @@
          headers: getHeaders(),
          body: JSON.stringify(userData),
         });
+      
         return getJson(res);
+       
       }
       export async function checkToken(jwt) {
         const res = await fetch(`${basePath}/users/me`, {

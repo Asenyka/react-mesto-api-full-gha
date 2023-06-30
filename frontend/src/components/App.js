@@ -38,7 +38,7 @@ function App() {
       checkToken(jwt)
         .then((res) => {
           setLoggedIn(true);
-          setUserEmail(res.data.email);
+          setUserEmail(res.user.email);
           navigate("/", { replace: true });
         })
         .catch((err) => {
@@ -60,7 +60,7 @@ function App() {
     api
       .getUserInfo()
       .then((user) => {
-        setCurrentUser(user);
+        setCurrentUser(user.user);
       })
       .catch((err) => {
         console.log(err);
@@ -69,7 +69,7 @@ function App() {
   }, [loggedIn]);
 
   function handleCardLike(card) {
-    const isLiked = card.likes.some((i) => i._id === currentUser._id);
+    const isLiked = card.likes.some(id => id === currentUser._id);
     api
       .changeLike(card._id, isLiked)
       .then((newCard) => {
@@ -135,7 +135,7 @@ function App() {
   function handleRegister(userData) {
     register(userData)
       .then((user) => {
-        setUserEmail(user.data.email);
+        setUserEmail(user.email);
         navigate("/sign-in");
         setTip("Вы успешно \n зарегистрировались!");
         setTipImage(tipImageSuccess);
