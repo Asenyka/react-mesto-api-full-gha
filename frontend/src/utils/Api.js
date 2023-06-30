@@ -83,7 +83,7 @@ class Api {
 }
 
 const api = new Api({
-  basePath: "http://localhost:3000",
+  basePath: "https://api.humsterchik.nomoreparties.sbs",
 });
 
 export default api;

@@ -1,5 +1,5 @@
 
-    const basePath="http://localhost:3000"
+    const basePath="https://api.humsterchik.nomoreparties.sbs"
     function getHeaders() {
         return {
           "Content-Type": "application/json",

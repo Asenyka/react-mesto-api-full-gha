@@ -4,6 +4,7 @@ const userModel = require('../models/user');
 const NotFoundError = require('../errors/not-found-error');
 const InvalidDataError = require('../errors/invalid-data-error');
 
+const { NODE_ENV, JWT_SECRET } = process.env;
 const OK = 200;
 
 const getUserById = (req, res, next) => {
@@ -79,7 +80,11 @@ const login = (req, res, next) => {
   const { email, password } = req.body;
   userModel.findUserByCredentials(email, password)
     .then((user) => {
-      const token = jwt.sign({ _id: user._id }, 'secret key');
+      const token = jwt.sign(
+        { _id: user._id },
+        NODE_ENV === 'production' ? JWT_SECRET : 'dev-secret',
+      );
+
       // res.cookie('jwt', token, {
       // maxAge: 604800000,
       //  httpOnly: true,}).end();
