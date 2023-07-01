@@ -9,7 +9,6 @@ const NotFoundError = require('./errors/not-found-error');
 const { DB_ADDRESS } = require('./utils/constants');
 
 mongoose.connect(DB_ADDRESS);
-
 const app = express();
 app.use(cors());
 app.use(express.json());
