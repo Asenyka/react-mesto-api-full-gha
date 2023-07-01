@@ -9,8 +9,6 @@
 
 ## Ссылки на проект
 
-IP  158.160.106.137
-
-Frontend https://humsterchik.nomoreparties.sbs
-
-Backend https://api.humsterchik.nomoreparties.sbs
+IP  158.160.106.137  
+Frontend https://humsterchik.nomoreparties.sbs  
+Backend https://api.humsterchik.nomoreparties.sbs  
