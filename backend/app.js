@@ -6,8 +6,8 @@ const cors = require('cors');
 const router = require('./routes');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 const NotFoundError = require('./errors/not-found-error');
+const { DB_ADDRESS } = require('./utils/constants');
 
-const { DB_ADDRESS } = process.env;
 mongoose.connect(DB_ADDRESS);
 
 const app = express();
